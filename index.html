@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phone World</title>
+  <!-- Daisy UI & Tailwind -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+  <header class="container mx-auto">
+    <div class="navbar bg-base-100">
+      <div class="navbar-start">
+        <div class="dropdown">
+          <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+            </svg>
+          </div>
+        </div>
+        <a class="btn btn-ghost text-xl">Phone<span class="text-orange-700">World</span></a>
+      </div>
+      <div class="navbar-end">
+        <a class="btn btn-accent">Sign Up</a>
+      </div>
+    </div>
+    <!-- Home Page -->
+    <div class="hero w-full min-h-screen">
+      <div class="hero-content text-center">
+        <div class="max-w-[800px]">
+          <h1 class="text-5xl font-bold">Apple Iphone 13 Pro Max</h1>
+          <p class="py-6">There are many variations of passages of Lorem Ipsum available, but the majority have suffered
+            alteration in some form, by injected humou.</p>
+          <button class="btn btn-primary">Buy Now</button>
+        </div>
+      </div>
+    </div>
+
+  </header>
+
+  <main class="container mx-auto">
+    <h2 class="text-5xl font-bold text-center mb-10">Search Your Phone</h2>
+    <section class="text-center mt-4">
+      <input id="input-field" type="text" placeholder="Search..." class="input input-bordered w-full max-w-[700px]" />
+      <button onclick="searchHandle()" class="btn btn-accent -ml-[4.75rem]">Search</button>
+    </section>
+    <section>
+      <!-- loading spinner -->
+      <div class="text-center my-40">
+        <span id="loading-spinner" class="loading loading-infinity loading-lg hidden"></span>
+      </div>
+      <!-- display Phone -->
+      <div id="phone-container" class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 mt-2"></div>
+    </section>
+    <!-- show all btn -->
+    <div class="hidden text-center mt-2" id="show-all-container">
+      <button onclick="showAll()" class="btn btn-accent">Show All</button>
+    </div>
+
+    <!-- display modal -->
+    <!-- Open the modal using ID.showModal() method -->
+    <dialog id="myModal" class="modal modal-bottom sm:modal-middle">
+      <div class="modal-box">
+        <h3 id="show-phone-name" class="font-bold text-lg"></h3>
+        <p id="show-details-container" class="py-4"></p>
+        <div class="modal-action">
+          <form method="dialog">
+            <!-- if there is a button in form, it will close the modal -->
+            <button class="btn">Close</button>
+          </form>
+        </div>
+      </div>
+    </dialog>
+
+  </main>
+
+  <footer></footer>
+
+
+
+  <script src="/js/script.js"></script>
+</body>
+
+</html>
